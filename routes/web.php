@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SignupController;
 // Route::get('/', function () {
 //     return view('home');
 // })->name('home');
@@ -39,3 +40,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/', [HomeController::class, 'index'])->name('about');
 
 Route::resource('products', ProductController::class);
+
+Route::get('/signup', [SignupController::class, 'signup_form'])->name('signup_form');
+Route::post('/signup', [SignupController::class, 'signup_check'])->name('signup_check');
