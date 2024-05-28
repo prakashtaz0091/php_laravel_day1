@@ -38,4 +38,4 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/', [HomeController::class, 'index'])->name('about');
 
-Route::resource('product', ProductController::class);
+Route::resource('products', ProductController::class);

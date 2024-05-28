@@ -19,7 +19,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        echo " show form to create products";
+        return view('create_product');
     }
 
     /**
@@ -27,7 +27,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       echo "new product created";
+        echo "<pre>";
+       print_r($request->all());
     }
 
     /**
