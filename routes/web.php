@@ -16,6 +16,9 @@ Route::get('/services', function () {
 });
 
 Route::get('/services/{service_name}/{opt_param?}', function ($service_name, $opt_param = null) {
-    echo 'service_detail   ' . $service_name . '   ' . $opt_param;
+    // echo 'service_detail   ' . $service_name . '   ' . $opt_param;
+
+    $data = compact('service_name', 'opt_param'); // compact('key', 'value') it is same as array('key' => 'value'), simply converting datas into array
+    return view('service', $data);  // passing data to view
 });
 
