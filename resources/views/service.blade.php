@@ -27,8 +27,16 @@
 {{-- {!! $unsafe_data !!} --}}
 
 
-@for ($i = 1; $i < 10; $i++)
+{{-- @for ($i = 1; $i < 10; $i++)
     {{ $i }}
-@endfor
+@endfor --}}
 
+
+@php
+    $i = 1;
+@endphp
+
+@while ($i < 5)    
+    {{ $i++ }}
+@endwhile
 
