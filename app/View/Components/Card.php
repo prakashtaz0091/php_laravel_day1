@@ -13,15 +13,17 @@ class Card extends Component
     public $description;
     public $link;
     public $image_url;
+    public $name;
     /**
      * Create a new component instance.
      */
-    public function __construct($title, $description, $link,  $imageurl)
+    public function __construct($title, $description, $link,  $imageurl, $name)
     {
         $this->title = $title;
         $this->description = $description;
         $this->link = $link;
         $this->image_url = $imageurl;
+        $this->name = $name;
     }
 
     /**
