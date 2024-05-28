@@ -1,5 +1,11 @@
 <h1>{{ $service_name }}</h1>
 
+@unless ($service_name == 'test')
+    <p>This is not test mode</p>
+    
+@endunless
+
+
 <p>{{ $opt_param ?? 'default opt params' }}</p>
 
 @if ($opt_param)
