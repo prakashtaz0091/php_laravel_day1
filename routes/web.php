@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -30,5 +30,5 @@ Route::get('/services/{service_name}/{opt_param?}', function ($service_name, $op
 
 
 
-});
+})->name('service_detail');
 
