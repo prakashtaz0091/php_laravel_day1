@@ -25,3 +25,10 @@
 
 {{-- here {!! $unsafe_data !!} this syntax doesn't protects from unsafe data --}}
 {{-- {!! $unsafe_data !!} --}}
+
+
+@for ($i = 1; $i < 10; $i++)
+    {{ $i }}
+@endfor
+
+
