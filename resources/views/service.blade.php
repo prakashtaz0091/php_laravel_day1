@@ -6,6 +6,11 @@
 @endunless
 
 
+@isset($service_name)
+    <p>{{ $service_name }} is set</p>
+@endisset
+
+
 <p>{{ $opt_param ?? 'default opt params' }}</p>
 
 @if ($opt_param)
