@@ -15,7 +15,7 @@ Route::get('/services', function () {
     return view('services');
 });
 
-Route::get('/services/{service_name}', function ($service_name) {
-    echo 'service_detail   ' . $service_name;
+Route::get('/services/{service_name}/{opt_param?}', function ($service_name, $opt_param = null) {
+    echo 'service_detail   ' . $service_name . '   ' . $opt_param;
 });
 
