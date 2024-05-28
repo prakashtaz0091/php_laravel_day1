@@ -13,7 +13,7 @@
            
             <div class="mb-3">
                 <label for="product_name" class="form-label">Product Name</label>
-                <input type="text" name="product_name" class="form-control" id="product_name" aria-describedby="product_name">
+                <input type="text" value="{{old('product_name')}}" name="product_name" class="form-control" id="product_name" aria-describedby="product_name">
                 <span class="text-danger">
                     @error('product_name')
                         {{$message}}
@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" name="price" class="form-control" id="price">
+                <input type="number" value="{{old('price')}}" name="price" class="form-control" id="price">
                 <span class="text-danger">
                     @error('price')
                     {{$message}}
