@@ -62,7 +62,11 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        echo "show specific product". $id;
+        $product = Product::find($id);
+        $data = compact('product');
+
+
+        return view('show_product', $data);
     }
 
     /**
