@@ -48,6 +48,7 @@ class ProductController extends Controller
 
 
         // return redirect()->back();to previous page
+        return redirect()->route('home');
 
 
     }
