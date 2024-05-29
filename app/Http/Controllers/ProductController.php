@@ -47,6 +47,9 @@ class ProductController extends Controller
         echo $product->name. ' added successfully';
 
 
+        // return redirect()->back();to previous page
+
+
     }
 
     /**
