@@ -62,7 +62,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        echo "show specific product";
+        echo "show specific product". $id;
     }
 
     /**

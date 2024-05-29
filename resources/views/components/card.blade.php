@@ -5,6 +5,6 @@
         <h5 class="card-title">{{ $product->name }}</h5>
         <p>Rs. {{ $product->amount }}</p>
         <p class="card-text">{{ $product->description }}</p>
-        <a href="#" class="btn btn-primary"> Details </a>
+        <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary"> Details </a>
     </div>
 </div>
