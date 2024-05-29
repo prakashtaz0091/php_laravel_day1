@@ -9,21 +9,15 @@ use Illuminate\View\Component;
 class Card extends Component
 {
 
-    public $title;
-    public $description;
-    public $link;
-    public $image_url;
-    public $name;
+    public $product;
+   
     /**
      * Create a new component instance.
      */
-    public function __construct($title, $description, $link,  $imageurl, $name)
+    public function __construct($product)
     {
-        $this->title = $title;
-        $this->description = $description;
-        $this->link = $link;
-        $this->image_url = $imageurl;
-        $this->name = $name;
+        $this->product = $product;
+       
     }
 
     /**

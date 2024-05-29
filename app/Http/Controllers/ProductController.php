@@ -13,7 +13,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        echo "products";
+        $products = Product::all();
+        $data = compact('products');
+
+
+        return view('products', $data);
     }
 
     /**
