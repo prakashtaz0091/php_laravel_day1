@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -31,9 +33,20 @@ class ProductController extends Controller
             [
             'product_name' => 'required',
             'price' => 'required|numeric',
+            'description' => 'required',
         
             ]
         );
+
+        $product = new Product();
+        $product->name = $request->product_name;
+        $product->amount = $request->price;
+        $product->description = $request->description;
+        $product->save();
+
+        echo $product->name. ' added successfully';
+
+
     }
 
     /**
